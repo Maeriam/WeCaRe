@@ -72,11 +72,11 @@ function TestimonialCarousel() {
     
     useEffect(() => {
         const interval = setInterval(() => {
-            handleNext();
+            setCurrentIndex(prev => (prev + 1) % testimonials.length);
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [currentIndex]);
+    }, []);
 
     const handleNext = () => {
         if (!isAnimating) {

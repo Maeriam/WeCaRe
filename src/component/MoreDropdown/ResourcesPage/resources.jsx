@@ -82,9 +82,9 @@ function Resources() {
                     Explore evidence-based strategies, coping tools and
                     practical guidance to strengthen mental wellness.
                   </p>
-                  <a href="#" className="resource-link">
+                  <button type="button" className="resource-link">
                     Read More <FaArrowRight />
-                  </a>
+                  </button>
                 </div>
               </div>
             ))}

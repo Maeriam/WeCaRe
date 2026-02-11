@@ -10,7 +10,7 @@ import {
   FaMoon,
   FaRainbow
 } from "react-icons/fa";
-import { GiLotusFlower, GiMeditation, GiFlowerPot } from "react-icons/gi";
+import { GiLotusFlower, GiMeditation } from "react-icons/gi";
 import { IoSparklesSharp } from "react-icons/io5";
 
 function Spa() {

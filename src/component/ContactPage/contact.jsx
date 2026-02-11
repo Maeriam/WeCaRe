@@ -1,19 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/contact.css";
-import {
-  FaBrain,
-  FaDumbbell,
-  FaSpa,
-  FaFilePdf,
-  FaClipboardList,
-  FaRunning,
-  FaSmile,
-  FaBullseye,
-  FaArrowRight,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 function ContactUs() {
   
