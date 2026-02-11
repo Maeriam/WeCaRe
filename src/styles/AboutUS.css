@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=PT+Serif:wght@400;700&display=swap');
+
+:root{
+  --color-primary: plum;
+  --color-accent: #00b894;
+  --color-text: #222;
+  --max-width: 880px;
+}
+
+body{
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'PT Serif', serif;
+  color: var(--color-text);
+}
+
+h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.25rem;
+  margin: 0 0 1rem 0;
+}
+
+.Aboutheader {
+  margin-top: 20vh;
+  margin-bottom: 3rem;
+  color: var(--color-text);
+  position: relative;
+}
+
+.Aboutheader::after{
+  content: '';
+  display: block;
+  width: 6rem;
+  height: 3px;
+  background: var(--color-primary);
+  margin: 0.75rem auto 0;
+  border-radius: 4px;
+}
+
+.AboutParag {
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.Abouttext {
+  max-width: var(--max-width);
+  margin: 0 auto 2.5rem auto;
+  padding: 0 1rem;
+  word-spacing: normal;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.aboutsection {
+  margin-bottom: 10vh;
+}
+
+/* Fade-in blocks */
+.about-block{
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+.about-block.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lead{
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .Aboutheader {
+    font-size: 2.5rem;
+    padding: 1.5rem 0;
+    text-underline-offset: 20px;
+  }
+
+  .AboutParag p {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+
+  .Abouttext {
+    padding: 0 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .Abouttext h4 {
+    font-size: 1.3rem;
+  }
+
+  .Abouttext p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Aboutheader {
+    font-size: 2rem;
+    padding: 1rem 0;
+    text-underline-offset: 15px;
+  }
+
+  .AboutParag p {
+    font-size: 0.9rem;
+    margin: 0 1rem;
+  }
+
+  .Abouttext {
+    padding: 0 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .Abouttext h4 {
+    font-size: 1.2rem;
+  }
+
+  .Abouttext p {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,569 @@
+/* ============================================
+   APPOINTMENT SECTION
+   ============================================ */
+
+.appointment-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ============================================
+   ANIMATED BACKGROUND
+   ============================================ */
+
+.appointment-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(186, 104, 200, 0.05) 0%, 
+        rgba(156, 39, 176, 0.1) 50%,
+        rgba(186, 104, 200, 0.05) 100%
+    );
+}
+
+/* Floating Shapes Animation */
+.floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(186, 104, 200, 0.15), rgba(156, 39, 176, 0.15));
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 5s;
+}
+
+.shape-3 {
+    width: 250px;
+    height: 250px;
+    bottom: 10%;
+    left: 50%;
+    animation-delay: 10s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translate(30px, -30px) scale(1.1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-30px, 30px) scale(0.9);
+        opacity: 0.3;
+    }
+    75% {
+        transform: translate(20px, 20px) scale(1.05);
+        opacity: 0.4;
+    }
+}
+
+/* ============================================
+   INFO SECTION (LEFT COLUMN)
+   ============================================ */
+
+.info-section {
+    position: relative;
+    z-index: 2;
+}
+
+.section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, plum, #ac4ebc);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(186, 104, 200, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(186, 104, 200, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(186, 104, 200, 0.5);
+    }
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.main-title .highlight {
+    background: linear-gradient(135deg, plum, #ac4ebc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* ============================================
+   BENEFITS CARDS
+   ============================================ */
+
+.benefits-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefit-card {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: slideInLeft 0.6s forwards;
+}
+
+.benefit-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(186, 104, 200, 0.2);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, plum, #ac4ebc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(186, 104, 200, 0.3);
+}
+
+.benefit-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.benefit-content h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.benefit-content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ============================================
+   APPOINTMENT FORM (RIGHT COLUMN)
+   ============================================ */
+
+.appointment-form-wrapper {
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: slideInRight 0.8s forwards;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, plum, #ac4ebc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(186, 104, 200, 0.4);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.form-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    color: #888;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-label i {
+    color: plum;
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-control:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #ac4ebc;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(186, 104, 200, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-control.focused,
+.form-select.focused {
+    border-color: #ba68c8;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(186, 104, 200, 0.1);
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ============================================
+   SUBMIT BUTTON
+   ============================================ */
+
+.btn-submit {
+    width: 100%;
+    padding: 16px 30px;
+    background: linear-gradient(135deg, plum, #ac4ebc);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(186, 104, 200, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+}
+
+.btn-submit:hover::before {
+    left: 100%;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(186, 104, 200, 0.5);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+
+.fade-in-left {
+    animation: fadeInLeft 0.8s ease forwards;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.8s ease forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.custom-select {
+  position: relative;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-select .selected {
+  padding: 14px 18px;
+  font-size: 1rem;
+}
+
+.custom-select.open {
+  border-color: #ac4ebc;
+  box-shadow: 0 0 0 4px rgba(186, 104, 200, 0.1);
+}
+
+.custom-select .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  border: 2px solid #ac4ebc;
+  border-radius: 12px;
+  margin-top: 5px;
+  z-index: 10;
+}
+
+.custom-select .options li {
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.custom-select .options li:hover {
+  background: #f0e5f6;
+}
+
+.custom-select .options li .icon {
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 992px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .appointment-form-wrapper {
+        margin-top: 40px;
+    }
+
+    .benefit-card {
+        padding: 20px;
+    }
+
+    .benefit-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .benefit-icon i {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .appointment-section {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .appointment-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 1.6rem;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .benefit-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .benefit-icon {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .section-badge {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .form-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .form-icon i {
+        font-size: 1.5rem;
+    }
+}
+

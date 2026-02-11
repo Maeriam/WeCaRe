@@ -1,0 +1,630 @@
+/***************** Spa Page Styles with Animations ****************/
+
+/* Hero Section */
+.spa-hero {
+  position: relative;
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://images.pexels.com/photos/6629521/pexels-photo-6629521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.spa-hero .hero-overlay {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.spa-hero h1 {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.spa-hero p {
+  font-size: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+/* Hero Animations */
+.hero-title {
+  animation: fadeInScale 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 1s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Introduction Section */
+.spa-intro {
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.spa-intro h2 {
+  font-size: 38px;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+.spa-intro p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.spa-intro img {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.slide-in-right.animate-in img {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02);
+  }
+}
+
+.spa-highlights {
+  margin-top: 30px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 17px;
+  color: #555;
+}
+
+.highlight-icon {
+  font-size: 24px;
+  margin-right: 12px;
+  color: plum;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.highlight-item.animate-in .highlight-icon {
+  animation: rotateIn 0.6s ease-out;
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+/* Treatments Section */
+.spa-treatments {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  color: plum;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.treatment-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(221, 160, 221, 0.3);
+}
+
+.treatment-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.treatment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.treatment-card:hover .treatment-image img {
+  transform: scale(1.15);
+}
+
+.treatment-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgba(221, 160, 221, 0.3));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.treatment-card:hover .treatment-overlay {
+  opacity: 1;
+}
+
+.treatment-icon {
+  font-size: 40px;
+  color: white;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.treatment-content {
+  padding: 30px;
+}
+
+.treatment-content h4 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: plum;
+  font-weight: 600;
+}
+
+.treatment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.treatment-list li {
+  font-size: 16px;
+  padding: 8px 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.treatment-list strong {
+  color: #333;
+}
+
+/* Packages Section */
+.spa-packages {
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.package-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+.package-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 45px rgba(221, 160, 221, 0.3);
+}
+
+.package-card.featured {
+  border: 3px solid plum;
+}
+
+.package-card.featured:hover {
+  border-color: #c996cc;
+  box-shadow: 0 25px 50px rgba(221, 160, 221, 0.4);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: plum;
+  color: white;
+  padding: 8px 40px;
+  transform: rotate(45deg);
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 1;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 3px 20px rgba(221, 160, 221, 0.6);
+  }
+}
+
+.package-header {
+  background: linear-gradient(135deg, plum 0%, #c996cc 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.package-card:hover .package-header {
+  background: linear-gradient(135deg, #c996cc 0%, plum 100%);
+}
+
+.package-header h4 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.package-duration {
+  font-size: 16px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.package-body {
+  padding: 30px;
+}
+
+.package-includes {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.package-includes li {
+  font-size: 16px;
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.package-includes li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: plum;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.package-description {
+  font-size: 15px;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Benefits Section */
+.spa-benefits {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.spa-benefits img {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.benefits-list {
+  padding-left: 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateX(10px);
+}
+
+.benefit-icon {
+  font-size: 36px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  color: plum;
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover .benefit-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.benefit-item.animate-in .benefit-icon {
+  animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.benefit-text h5 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+}
+
+.benefit-text p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.spa-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, plum 0%, #c996cc 100%);
+  color: white;
+}
+
+.spa-cta h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.spa-cta p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.spa-cta .btn-custom {
+  background-color: white;
+  color: plum;
+  border: 2px solid white;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.spa-cta .btn-custom:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/***************** Animation Classes ****************/
+
+/* Base animation states */
+.fade-in,
+.slide-in-left,
+.slide-in-right,
+.slide-in-up,
+.stagger-item,
+.scale-in,
+.float-in {
+  opacity: 0;
+}
+
+/* Fade In Animation */
+.fade-in {
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.animate-in {
+  opacity: 1;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In from Left */
+.slide-in-left {
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-left.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide In from Right */
+.slide-in-right {
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-right.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide In from Bottom */
+.slide-in-up {
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-up.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Animation for Cards */
+.stagger-item {
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: var(--stagger-delay, 0s);
+}
+
+.stagger-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scale In Animation */
+.scale-in {
+  transform: scale(0.85);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scale-in.animate-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Float In Animation */
+.float-in {
+  transform: translateY(40px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.float-in.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .spa-hero h1 {
+    font-size: 36px;
+  }
+  
+  .spa-hero p {
+    font-size: 18px;
+  }
+  
+  .spa-intro h2 {
+    font-size: 28px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .package-header h4 {
+    font-size: 24px;
+  }
+  
+  .spa-cta h2 {
+    font-size: 32px;
+  }
+  
+  .popular-badge {
+    font-size: 12px;
+    padding: 6px 35px;
+  }
+  
+  /* Simplify animations on mobile */
+  .slide-in-left,
+  .slide-in-right {
+    transform: translateX(0);
+  }
+  
+  .slide-in-left.animate-in,
+  .slide-in-right.animate-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .benefit-item:hover {
+    transform: translateX(0);
+  }
+}

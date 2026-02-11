@@ -1,0 +1,434 @@
+/***************** Therapy Page Styles with Animations ****************/
+
+/* Hero Section */
+.therapy-hero {
+  position: relative;
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.therapy-hero .hero-overlay {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.therapy-hero h1 {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.therapy-hero p {
+  font-size: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Hero Animations */
+.hero-title {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Introduction Section */
+.therapy-intro {
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.therapy-intro h2 {
+  font-size: 38px;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+.therapy-intro p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.therapy-intro img {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Therapy Types Section */
+.therapy-types {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  color: plum;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.therapy-card {
+  background: #fafafa;
+  padding: 40px 30px;
+  border-radius: 12px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.therapy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(221, 160, 221, 0.2);
+  border-color: plum;
+}
+
+.therapy-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: plum;
+  transition: transform 0.3s ease;
+}
+
+.therapy-card:hover .therapy-icon {
+  transform: scale(1.1);
+}
+
+.therapy-card h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.therapy-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666;
+  text-align: justify;
+}
+
+/* Conditions Section */
+.therapy-conditions {
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.therapy-conditions h2 {
+  font-size: 38px;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+.therapy-conditions img {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.conditions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.conditions-list li {
+  font-size: 18px;
+  padding: 12px 0;
+  padding-left: 30px;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInItem 0.5s ease-out forwards;
+}
+
+.conditions-list li:nth-child(1) { animation-delay: 0.1s; }
+.conditions-list li:nth-child(2) { animation-delay: 0.15s; }
+.conditions-list li:nth-child(3) { animation-delay: 0.2s; }
+.conditions-list li:nth-child(4) { animation-delay: 0.25s; }
+.conditions-list li:nth-child(5) { animation-delay: 0.3s; }
+.conditions-list li:nth-child(6) { animation-delay: 0.35s; }
+.conditions-list li:nth-child(7) { animation-delay: 0.4s; }
+.conditions-list li:nth-child(8) { animation-delay: 0.45s; }
+.conditions-list li:nth-child(9) { animation-delay: 0.5s; }
+.conditions-list li:nth-child(10) { animation-delay: 0.55s; }
+.conditions-list li:nth-child(11) { animation-delay: 0.6s; }
+.conditions-list li:nth-child(12) { animation-delay: 0.65s; }
+
+.slide-in-right.animate-in .conditions-list li {
+  animation: fadeInItem 0.5s ease-out forwards;
+}
+
+@keyframes fadeInItem {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.conditions-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: plum;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Process Section */
+.therapy-process {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.process-step {
+  text-align: center;
+  padding: 30px 20px;
+  height: 100%;
+  background: #fafafa;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: plum;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 auto 25px;
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover .step-number {
+  transform: scale(1.1) rotate(360deg);
+}
+
+.process-step h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.process-step p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* CTA Section */
+.therapy-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, plum 0%, #c996cc 100%);
+  color: white;
+}
+
+.therapy-cta h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.therapy-cta p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.therapy-cta .btn-custom {
+  background-color: white;
+  color: plum;
+  border: 2px solid white;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.therapy-cta .btn-custom:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/***************** Animation Classes ****************/
+
+/* Base animation states - elements start hidden */
+.fade-in,
+.slide-in-left,
+.slide-in-right,
+.slide-in-up,
+.stagger-item {
+  opacity: 0;
+}
+
+/* Fade In Animation */
+.fade-in {
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.animate-in {
+  opacity: 1;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In from Left */
+.slide-in-left {
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-left.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide In from Right */
+.slide-in-right {
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-right.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide In from Bottom */
+.slide-in-up {
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-up.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Animation for Cards */
+.stagger-item {
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: var(--stagger-delay, 0s);
+}
+
+.stagger-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pulse animation for step numbers */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.step-number {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.process-step:hover .step-number {
+  animation: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .therapy-hero h1 {
+    font-size: 36px;
+  }
+  
+  .therapy-hero p {
+    font-size: 18px;
+  }
+  
+  .therapy-intro h2,
+  .therapy-conditions h2 {
+    font-size: 28px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .therapy-cta h2 {
+    font-size: 32px;
+  }
+  
+  /* Reduce animation transforms on mobile for better performance */
+  .slide-in-left,
+  .slide-in-right {
+    transform: translateX(0);
+  }
+  
+  .slide-in-left.animate-in,
+  .slide-in-right.animate-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+}

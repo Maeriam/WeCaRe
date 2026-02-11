@@ -1,0 +1,361 @@
+/***************** Resources Page Styles ****************/
+
+/* Hero Section */
+.resources-hero {
+  position: relative;
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 76px; */
+}
+
+.resources-hero .hero-overlay {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.resources-hero h1 {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.resources-hero p {
+  font-size: 22px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Introduction Section */
+.resources-intro {
+  padding: 80px 0 40px;
+  background-color: white;
+}
+
+.resources-intro h2 {
+  font-size: 38px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.intro-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Resource Categories */
+.resource-category {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.resource-category.alt-bg {
+  background-color: #fafafa;
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.category-icon {
+  font-size: 56px;
+  margin-bottom: 15px;
+}
+
+.category-header h2 {
+  font-size: 36px;
+  color: plum;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.category-header p {
+  font-size: 17px;
+  color: #666;
+}
+
+.resource-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid plum;
+}
+
+.resource-category.alt-bg .resource-card {
+  background: white;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(221, 160, 221, 0.2);
+}
+
+.resource-card h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.resource-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.resource-link {
+  color: plum;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+  color: rgb(113, 80, 113);
+  text-decoration: none;
+}
+
+/* Downloadable Resources Section */
+.downloadable-resources {
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  color: plum;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.download-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 12px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(221, 160, 221, 0.2);
+}
+
+.download-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.download-card h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.download-card p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.btn-download {
+  background-color: plum;
+  color: white;
+  border: 2px solid plum;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-download:hover {
+  background-color: rgb(113, 80, 113);
+  border-color: rgb(113, 80, 113);
+  transform: translateY(-2px);
+}
+
+/* Helpful Links Section */
+.helpful-links {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.link-card {
+  background: #fafafa;
+  padding: 35px;
+  border-radius: 12px;
+  height: 100%;
+  border-left: 4px solid plum;
+}
+
+.link-card h5 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: plum;
+  font-weight: 600;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-list li {
+  font-size: 16px;
+  padding: 12px 0;
+  color: #555;
+  line-height: 1.7;
+}
+
+.links-list strong {
+  color: #333;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.links-list a {
+  color: plum;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.links-list a:hover {
+  color: rgb(113, 80, 113);
+}
+
+/* CTA Section */
+.resources-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, plum 0%, #c996cc 100%);
+  color: white;
+}
+
+.resources-cta h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.resources-cta p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.resources-cta .btn-custom {
+  background-color: white;
+  color: plum;
+  border: 2px solid white;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.resources-cta .btn-custom:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resources-hero h1 {
+    font-size: 36px;
+  }
+  
+  .resources-hero p {
+    font-size: 18px;
+  }
+  
+  .resources-intro h2 {
+    font-size: 28px;
+  }
+  
+  .category-header h2 {
+    font-size: 28px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .resources-cta h2 {
+    font-size: 32px;
+  }
+}
+
+/* Animation Base */
+.fade-in,
+.slide-up,
+.stagger-item,
+.scale-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.slide-up {
+  transform: translateY(60px);
+}
+
+.scale-in {
+  transform: scale(0.9);
+}
+
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Stagger effect */
+.stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.stagger-item:nth-child(2) { transition-delay: 0.2s; }
+.stagger-item:nth-child(3) { transition-delay: 0.3s; }
+.stagger-item:nth-child(4) { transition-delay: 0.4s; }
+
+/* Icon Styling */
+.download-icon {
+  font-size: 1.8rem;
+  color: plum;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,324 @@
+/***************** Team Page Styles ****************/
+
+/* Hero Section */
+.team-hero {
+  position: relative;
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.pexels.com/photos/3184432/pexels-photo-3184432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 76px;
+}
+
+.team-hero .hero-overlay {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.team-hero h1 {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.team-hero p {
+  font-size: 22px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Introduction Section */
+.team-intro {
+  padding: 80px 0 40px;
+  background-color: white;
+}
+
+.team-intro h2 {
+  font-size: 38px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.intro-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Leadership Section */
+.leadership-section {
+  padding: 60px 0 80px;
+  background-color: #fafafa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  color: plum;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.leader-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(221, 160, 221, 0.25);
+}
+
+.leader-image {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.leader-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.leader-card:hover .leader-image img {
+  transform: scale(1.05);
+}
+
+.leader-info {
+  padding: 35px;
+}
+
+.leader-info h3 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.leader-title {
+  font-size: 18px;
+  color: plum;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.leader-bio {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.leader-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.leader-credentials span {
+  background: #fafafa;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #555;
+  border: 1px solid #e0e0e0;
+}
+
+/* Team Sections */
+.team-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.team-section.alt-bg {
+  background-color: #fafafa;
+}
+
+.team-member-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.team-section.alt-bg .team-member-card {
+  background: white;
+}
+
+.team-member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(221, 160, 221, 0.2);
+}
+
+.member-image {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-member-card:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.member-info {
+  padding: 25px;
+}
+
+.member-info h4 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.member-title {
+  font-size: 16px;
+  color: plum;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.member-specialty {
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.member-bio {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Compact Card Variant */
+.team-member-card.compact .member-image {
+  height: 220px;
+}
+
+.team-member-card.compact .member-info {
+  padding: 20px;
+}
+
+.team-member-card.compact .member-info h4 {
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+
+.team-member-card.compact .member-title {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.team-member-card.compact .member-specialty {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* CTA Section */
+.team-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, plum 0%, #c996cc 100%);
+  color: white;
+}
+
+.team-cta h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.team-cta p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.team-cta .btn-custom {
+  background-color: white;
+  color: plum;
+  border: 2px solid white;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.team-cta .btn-custom:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-hero h1 {
+    font-size: 36px;
+  }
+  
+  .team-hero p {
+    font-size: 18px;
+  }
+  
+  .team-intro h2 {
+    font-size: 28px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .leader-image {
+    height: 280px;
+  }
+  
+  .leader-info h3 {
+    font-size: 24px;
+  }
+  
+  .member-image {
+    height: 240px;
+  }
+  
+  .team-cta h2 {
+    font-size: 32px;
+  }
+}

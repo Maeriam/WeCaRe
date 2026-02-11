@@ -1,0 +1,189 @@
+/* ================================
+   PILL / OVAL NAVBAR
+================================ */
+
+.pill-navbar {
+  width: 94%;
+  margin: 14px auto;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.75);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+  border-radius: 999px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   BRAND
+================================ */
+
+.pill-brand {
+  text-decoration: none;
+}
+
+.pill-brand-icon {
+  font-size: 20px;
+  color: plum;
+}
+
+.pill-brand-text {
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 0.4px;
+}
+
+/* ================================
+   NAV LINKS
+================================ */
+
+.pill-nav-links .nav-link {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 12px;
+  color: #222 !important;
+  cursor: pointer;
+}
+
+.pill-nav-links .nav-link:hover {
+  color: plum !important;
+}
+
+/* ================================
+   DROPDOWN
+================================ */
+
+.dropdown-menu {
+  border: none;
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  font-size: 14px;
+  padding: 8px 14px;
+}
+
+.dropdown-item:hover {
+  color: plum !important;
+  background-color: rgba(221, 160, 221, 0.12);
+}
+
+/* ================================
+   CTA BUTTON
+================================ */
+
+.pill-cta {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background-color: plum;
+  color: white !important;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pill-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(221, 160, 221, 0.45);
+}
+
+/* ================================
+   MOBILE TWEAKS
+================================ */
+
+@media (max-width: 991px) {
+  .pill-navbar {
+    border-radius: 20px;
+    padding: 12px 16px;
+  }
+
+  .pill-cta {
+    margin-top: 10px;
+  }
+}
+
+/* Scroll shrink effect */
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 6px 18px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+.pill-nav-links .nav-link {
+  position: relative;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 12px;
+  color: #222 !important;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.pill-nav-links .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: plum;
+  transition: width 0.3s ease;
+}
+
+.pill-nav-links .nav-link:hover::after {
+  width: 100%;
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  display: block;
+  visibility: hidden;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.pill-cta {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background-color: plum;
+  color: white !important;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pill-cta::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  top: 0;
+  left: -100%;
+  transition: left 0.4s ease;
+}
+
+.pill-cta:hover::before {
+  left: 100%;
+}
