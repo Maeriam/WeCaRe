@@ -75,7 +75,7 @@ Responsive Design Principles
 
 Clone the repository:
 
-git clone https://github.com/your-username/wecare.git
+git clone https://github.com/Maeriam/WeCaRe.git
 
 
 Navigate into the project folder:
