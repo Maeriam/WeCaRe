@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import "../../../styles/resources.css";
 import {
   FaBrain,
-  FaDumbbell,
-  FaSpa,
   FaFilePdf,
   FaClipboardList,
   FaRunning,
