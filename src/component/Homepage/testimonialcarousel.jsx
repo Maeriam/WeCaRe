@@ -76,7 +76,7 @@ function TestimonialCarousel() {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [testimonials.length]);
 
     const handleNext = () => {
         if (!isAnimating) {
